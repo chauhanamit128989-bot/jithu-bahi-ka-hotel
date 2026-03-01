@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>limbach's Restaurant - Authentic Gujarati & Punjabi Cuisine | Ahmedabad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">limbach's</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span><span></span><span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to limbach's Restaurant</h1>
+            <p>Authentic Gujarati Thali, Punjabi Dishes & Tasty Fast Food in Ahmedabad</p>
+            <a href="#menu" class="btn">Check Full Menu</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Fresh, homemade taste with love — serving Gujarati thali, Punjabi curries, and quick bites daily.</p>
+                    <p>Order easily via WhatsApp!</p>
+                </div>
+                <img src="https://images.mid-day.com/images/images/2025/may/makeba-0605_d.jpg" alt="Restaurant Interior" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <h2>Our Delicious Menu</h2>
+            <p class="menu-subtitle">Freshly prepared daily — Gujarati comfort, Punjabi richness & street-style fast food</p>
+
+            <h3 class="category-title">🪔 Gujarati / Thali</h3>
+            <div class="menu-grid">
+                <!-- Your menu items here – same as before, no change needed -->
+                <!-- ... (cut for brevity, keep your original menu-grid code) ... -->
+            </div>
+
+            <!-- Punjabi, Fast Food, Extras same as your code -->
+
+            <a href="#" class="btn whatsapp-btn large-btn order-trigger">Order Now on WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Order Karo!</h2>
+            <p>Ahmedabad, Gujarat</p>
+            <p>Phone / WhatsApp: <strong>+91 84692 17638</strong></p>
+            <a href="#" class="whatsapp-btn large-btn order-trigger">Place Order Now</a>
+        </div>
+    </section>
+
+    <!-- Modal (same as yours, but class added for trigger) -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Place Your Delicious Order 🍛</h2>
+            <p class="modal-subtitle">Fresh Gujarati & Punjabi flavors await!</p>
+
+            <form id="orderForm">
+                <!-- Your form fields same – name, phone, address, items, notes, total -->
+                <!-- ... (keep your form code) ... -->
+
+                <button type="submit" class="whatsapp-btn fancy-whatsapp-btn" id="sendOrderBtn">
+                    <span>Send Order on WhatsApp</span>
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.074-.149-.669-.719-.916-.952zM12 2C6.477 2 2 6.477 2 12c0 2.136.696 4.11 1.868 5.715L2 22l4.285-1.868C7.89 21.304 9.864 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 limbach's Restaurant. Made with ❤️ in Ahmedabad.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
