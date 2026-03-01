@@ -1,0 +1,711 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.9);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    color: #ffcc00;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    animation: fadeUp 1.5s ease-out;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.btn, .whatsapp-btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn:hover, .whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.section {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #c0392b;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-img {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    animation: fadeInRight 1.2s ease-out;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s;
+    animation: fadeUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.menu-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.5rem;
+}
+
+.menu-item p {
+    padding: 0 20px 15px;
+    color: #666;
+}
+
+.price {
+    display: block;
+    background: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    padding: 12px;
+    margin: 15px 20px 25px;
+    border-radius: 30px;
+}
+
+.contact-section {
+    background: #c0392b;
+    color: white;
+}
+
+.contact-section h2 {
+    color: white;
+}
+
+.whatsapp-btn {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    padding: 18px 50px;
+}
+
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Stagger menu items */
+.menu-item:nth-child(1) { animation-delay: 0.2s; }
+.menu-item:nth-child(2) { animation-delay: 0.4s; }
+.menu-item:nth-child(3) { animation-delay: 0.6s; }
+
+/* Responsive */
+@media (max-width: 455px) {
+    .hero h1 { font-size: 3rem; }
+    .about-content { flex-direction: column; text-align: center; }
+}
+/* Menu enhancements */
+.menu-section {
+    background: #fffaf0;
+    padding: 120px 5% 80px;
+}
+
+.menu-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #c0392b;
+    margin: 60px 0 30px;
+    text-align: center;
+    position: relative;
+}
+
+.category-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #ffcc00;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-size: 1.6rem;
+    padding: 20px 20px 8px;
+    color: #222;
+}
+
+.menu-item p {
+    padding: 0 20px 15px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.price {
+    background: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 12px 25px;
+    margin: 0 20px 25px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.extras-list {
+    background: #f9f5f0;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.extras-list ul {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.extras-list li {
+    margin: 12px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.extras-list li::before {
+    content: "•";
+    color: #c0392b;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* Big button */
+.large-btn {
+    font-size: 1.4rem;
+    padding: 20px 60px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 455px) {
+    .category-title { font-size: 2rem; }
+    .menu-grid { gap: 30px; }
+}
+/* ==================== Hamburger Menu ==================== */
+.menu-toggle {
+    display: none; /* hidden by default */
+}
+
+.hamburger {
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: white;
+    height: 4px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.hamburger span:nth-child(1) { width: 100%; }
+.hamburger span:nth-child(2) { width: 80%; }
+.hamburger span:nth-child(3) { width: 60%; }
+
+/* Mobile menu behavior */
+@media (max-width: 455px) {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+        z-index: 1100;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;           /* hidden off-screen */
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(51, 51, 51, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 30px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.4rem;
+        padding: 10px 30px;
+    }
+
+    /* When checkbox is checked → show menu */
+    #menu-toggle:checked ~ .nav-links {
+        right: 0;
+    }
+
+    /* Animate hamburger to X when open */
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+/* ==================== Menu Section - One item per row on mobile ==================== */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Force 1 column on mobile (max-width 768px) */
+@media (max-width: 455px) {
+    .menu-grid {
+        grid-template-columns: 1fr;           /* only 1 column */
+        gap: 30px;
+    }
+
+    .menu-item {
+        max-width: 100%;
+        margin: 0 auto;                       /* center if needed */
+    }
+
+    .menu-item img {
+        height: 220px;                        /* slightly smaller image on mobile */
+    }
+
+    .category-title {
+        font-size: 2.2rem;
+        margin: 50px 0 25px;
+    }
+}
+
+@media (min-width: 455px) and (max-width: 400px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+}
+/* Fix common extra spaces on mobile */
+* {
+    box-sizing: border-box;  /* already there, but confirm */
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;      /* prevents right-side mystery space */
+}
+
+/* Reduce section padding on mobile */
+.section {
+    padding: 60px 5% !important;   /* was 100px → reduced */
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 4% !important;   /* even smaller on mobile */
+    }
+
+    .container {
+        padding: 0 15px;               /* tighter sides */
+    }
+
+    /* Hero - make sure no extra bottom gap */
+    .hero {
+        height: 85vh !important;       /* instead of 100vh → avoids address bar push */
+        min-height: 500px;             /* fallback */
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .hero-content {
+        padding: 20px !important;
+    }
+
+    /* About section - reduce image/text gap */
+    .about-content {
+        gap: 30px !important;          /* was 60px */
+    }
+
+    .about-img {
+        margin-top: 20px !important;
+    }
+
+    /* Menu section - tighter spacing */
+    .menu-section {
+        padding-top: 50px !important;  /* reduce top space */
+        padding-bottom: 40px !important;
+    }
+
+    .category-title {
+        margin: 40px 0 20px !important;   /* tighter */
+    }
+
+    .menu-grid {
+        gap: 25px !important;             /* was 40px → smaller cards gap */
+        margin-bottom: 30px !important;
+    }
+
+    .menu-item {
+        margin-bottom: 0 !important;
+    }
+
+    .extras-list {
+        margin: 30px auto !important;
+        padding: 20px !important;
+    }
+
+    /* Navbar/Hamburger - no extra top space */
+    .navbar {
+        padding: 12px 5% !important;      /* tighter */
+    }
+
+    .hero {
+        margin-top: 0 !important;         /* no gap after fixed navbar */
+    }
+}
+
+/* Prevent any horizontal scroll/white bar on right */
+body {
+    overflow-x: hidden !important;
+}
+
+/* If hero still has gap below - force no margin */
+#home + .section {
+    margin-top: -1px !important;   /* tiny overlap fix if needed */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+    
+}
+
+
+.modal-content {
+    background: linear-gradient(135deg, #fffaf0 0%, #fff8e1 100%);
+    margin: 6% auto;
+    
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 520px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    color: #c0392b;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+    color: #e74c3c;
+}
+
+.modal h2 {
+    color: #c0392b;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.modal-subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.form-group {
+    
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #25D366;
+    outline: none;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.items-heading {
+    color: #c0392b;
+    margin: 30px 0 20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.item-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+}
+
+.item-info strong {
+    font-size: 1.1rem;
+}
+
+.item-info .price-tag {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.qty {
+    
+    width: 70px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.total-box {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.fancy-whatsapp-btn {
+    background: linear-gradient(90deg, #25D366, #128C7E);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s;
+}
+
+.fancy-whatsapp-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+.fancy-whatsapp-btn svg {
+    fill: white;
+}
